@@ -25,6 +25,11 @@ export interface NodeIKernelRecentContactService {
                 sendMemberName: any;
                 sendNickName: any;
                 peerUid: string; peerUin: string, msgTime: string, chatType: ChatType, msgId: string
+                sendStatus: number; //1为正在发送 2为正常状态
+                atType: number; //0：正常 1：@全体成员 6：有人@我 
+                unreadCnt: string; //返回的是str，不过是确切的未读消息数，不会出现99+之类的东西
+                topFlag: number //1为置顶, 0为默认
+                shieldFlag: string //群组中 "1"允许消息提醒，"4"接收消息但不提醒 对于好友均为"0"（未测试）；有时会出现群聊为"0"的情况视作不提醒
             }>
         }
     }>; // 1 arguments

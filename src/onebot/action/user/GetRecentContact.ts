@@ -34,6 +34,11 @@ export default class GetRecentContact extends OneBotAction<Payload, any> {
                     sendNickName: t.sendNickName,
                     sendMemberName: t.sendMemberName,
                     peerName: t.peerName,
+                    sendStatus: t.sendStatus,
+                    atType: t.atType,
+                    unreadCount: parseInt(t.unreadCnt),
+                    isTop: t.topFlag == 1,
+                    shieldFlag: parseInt(t.shieldFlag)
                 };
             }
             return {
